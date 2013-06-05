@@ -11,6 +11,26 @@
 <Description></Description>
 <Text></Text>
 
+<Symbol symbolId="SYMB16" type="mscCondition" xCenter="473" yCenter="121" fixedDimensions="FALSE" width="66" height="44" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text>Idle</Text>
+</Symbol>
+
+<Symbol symbolId="SYMB17" type="mscCondition" xCenter="671" yCenter="121" fixedDimensions="FALSE" width="66" height="44" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text>Idle</Text>
+</Symbol>
+
+<Symbol symbolId="SYMB18" type="mscCondition" xCenter="473" yCenter="528" fixedDimensions="FALSE" width="66" height="44" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text>Idle</Text>
+</Symbol>
+
+<Symbol symbolId="SYMB19" type="mscCondition" xCenter="671" yCenter="528" fixedDimensions="FALSE" width="66" height="44" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text>Idle</Text>
+</Symbol>
+
 <Symbol symbolId="SYMB2" type="mscLifeline" xCenter="44" yCenter="330" fixedDimensions="TRUE" width="66" height="550" color="#000000" fillColor="#ffffff" dies="FALSE">
 <Description></Description>
 <Text>Env</Text>
@@ -43,7 +63,7 @@
 <Text>WaitInfoZone</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB7" type="mscCondition" xCenter="264" yCenter="517" fixedDimensions="FALSE" width="66" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB7" type="mscCondition" xCenter="264" yCenter="528" fixedDimensions="FALSE" width="66" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>Idle</Text>
 </Symbol>
@@ -70,11 +90,11 @@
 
 <Link linkId="LINK61" type="msg" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text>tInfoZone(Quant)</Text>
-<Connector attachedSymbolId="SYMB3" type="mscvoid" isOutside="TRUE" side="y" position="0.52" endType="voidend">
+<Connector attachedSymbolId="SYMB3" type="mscvoid" isOutside="TRUE" side="y" position="0.56" endType="voidend">
 <Text id="1"></Text>
 <Text id="2"></Text>
 </Connector>
-<Connector attachedSymbolId="SYMB2" type="mscvoid" isOutside="TRUE" side="y" position="0.52" endType="arrow">
+<Connector attachedSymbolId="SYMB2" type="mscvoid" isOutside="TRUE" side="y" position="0.56" endType="arrow">
 <Text id="1"></Text>
 <Text id="2"></Text>
 </Connector>

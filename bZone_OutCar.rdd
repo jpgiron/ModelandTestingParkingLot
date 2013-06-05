@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE Diagram SYSTEM "rtdsDiagram.dtd">
+
+<Diagram language="sdl" type="msc" name="bZone_OutCar" showMsgData="full" linksCrossingAllowed="FALSE" cellWidthMm="4">
+
+<DiagramPartition name="Part. 0" nbPagesH="1" nbPagesV="1">
+<PageSpecification pageWidth="21" pageHeight="29.7" topMargin="0" bottomMargin="0" leftMargin="0" rightMargin="0" pageFooter="FALSE"/>
+
+<Symbol symbolId="SYMB1" type="mscExternalFrm" xCenter="297" yCenter="420" fixedDimensions="TRUE" width="551" height="775" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text></Text>
+
+<Symbol symbolId="SYMB10" type="mscCondition" xCenter="231" yCenter="264" fixedDimensions="FALSE" width="132" height="44" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text>VerifyIsaCarOut</Text>
+</Symbol>
+
+<Symbol symbolId="SYMB2" type="mscCondition" xCenter="484" yCenter="506" fixedDimensions="FALSE" width="66" height="44" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text>Idle</Text>
+</Symbol>
+
+<Symbol symbolId="SYMB3" type="mscCondition" xCenter="231" yCenter="517" fixedDimensions="FALSE" width="66" height="44" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text>Idle</Text>
+</Symbol>
+
+<Symbol symbolId="SYMB4" type="mscLifeline" xCenter="55" yCenter="319" fixedDimensions="TRUE" width="66" height="616" color="#000000" fillColor="#ffffff" dies="FALSE">
+<Description></Description>
+<Text>Env</Text>
+<LifelineComponent type="norm" height="616" color="#000000"/>
+</Symbol>
+
+<Symbol symbolId="SYMB5" type="mscCondition" xCenter="484" yCenter="77" fixedDimensions="FALSE" width="66" height="44" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text>Idle</Text>
+</Symbol>
+
+<Symbol symbolId="SYMB6" type="mscLifeline" xCenter="484" yCenter="319" fixedDimensions="FALSE" width="88" height="616" color="#000000" fillColor="#ffffff" dies="FALSE">
+<Description></Description>
+<Text>bLocalCtrl</Text>
+<LifelineComponent type="norm" height="616" color="#000000"/>
+</Symbol>
+
+<Symbol symbolId="SYMB7" type="mscLifeline" xCenter="231" yCenter="319" fixedDimensions="TRUE" width="66" height="616" color="#000000" fillColor="#ffffff" dies="FALSE">
+<Description></Description>
+<Text>pZone(0)</Text>
+<LifelineComponent type="norm" height="616" color="#000000"/>
+</Symbol>
+
+<Symbol symbolId="SYMB8" type="mscCondition" xCenter="231" yCenter="176" fixedDimensions="FALSE" width="110" height="44" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text>WaitSensorIR4</Text>
+</Symbol>
+
+<Symbol symbolId="SYMB9" type="mscCondition" xCenter="231" yCenter="77" fixedDimensions="FALSE" width="66" height="44" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text>Idle</Text>
+</Symbol>
+</Symbol>
+
+<Link linkId="LINK14" type="msg" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>sIR4_Zone</Text>
+<Connector attachedSymbolId="SYMB4" type="mscvoid" isOutside="TRUE" side="y" position="-0.321428571429" endType="voidend">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB7" type="mscvoid" isOutside="TRUE" side="y" position="-0.321428571429" endType="arrow">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+
+</Link>
+
+<Link linkId="LINK12" type="msg" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>sLoopInductive_Zone</Text>
+<Connector attachedSymbolId="SYMB4" type="mscvoid" isOutside="TRUE" side="y" position="0.0357142857143" endType="voidend">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB7" type="mscvoid" isOutside="TRUE" side="y" position="0.0357142857143" endType="arrow">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+
+</Link>
+
+<Link linkId="LINK11" type="msg" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>sIR3_Zone</Text>
+<Connector attachedSymbolId="SYMB4" type="mscvoid" isOutside="TRUE" side="y" position="-0.607142857143" endType="voidend">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB7" type="mscvoid" isOutside="TRUE" side="y" position="-0.607142857143" endType="arrow">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+
+</Link>
+
+<Link linkId="LINK20" type="msg" textSegmentNum="0" color="#ff0000" reverseRead="FALSE" oriented="TRUE">
+<Text>sErrorFindingZone</Text>
+<Connector attachedSymbolId="SYMB6" type="mscvoid" isOutside="TRUE" side="y" position="0.357142857143" endType="voidend">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB4" type="mscvoid" isOutside="TRUE" side="y" position="0.357142857143" endType="arrow">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+
+</Link>
+
+<Link linkId="LINK19" type="msg" textSegmentNum="0" color="#0000ff" reverseRead="FALSE" oriented="TRUE">
+<Text>VerifyIsaCarOut(Quant,ZonePID)</Text>
+<Connector attachedSymbolId="SYMB7" type="mscvoid" isOutside="TRUE" side="y" position="0.178571428571" endType="voidend">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB6" type="mscvoid" isOutside="TRUE" side="y" position="0.178571428571" endType="arrow">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+
+</Link>
+</DiagramPartition>
+
+</Diagram>

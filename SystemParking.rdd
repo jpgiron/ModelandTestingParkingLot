@@ -104,7 +104,7 @@ SIGNAL sOkCreateZone(PID,Quant),sErrorExcZones;</Text>
 </Symbol>
 </Symbol>
 
-<Link linkId="LINK78" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Link linkId="LINK94" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text>cEnv_LCtrl</Text>
 <Connector attachedSymbolId="SYMB8" type="chnl" isOutside="TRUE" side="x" position="0.0" endType="midarrow">
 <Text id="1">[sFreeSpotZone,
@@ -123,11 +123,11 @@ sZoneCreated
 ]</Text>
 <Text id="2"></Text>
 </Connector>
-<LinkSegment orientation="v" length="-187"/>
+<LinkSegment orientation="v" length="-198"/>
 
 </Link>
 
-<Link linkId="LINK92" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Link linkId="LINK93" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text>cLCtrl_Zone</Text>
 <Connector attachedSymbolId="SYMB8" type="chnl" isOutside="TRUE" side="x" position="0.0" endType="midarrow">
 <Text id="1">[
@@ -149,7 +149,7 @@ sReqInfo
 
 </Link>
 
-<Link linkId="LINK90" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Link linkId="LINK95" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text>cLCtrl_ZManager</Text>
 <Connector attachedSymbolId="SYMB8" type="chnl" isOutside="TRUE" side="y" position="0.0" endType="midarrow">
 <Text id="1">[sOkCreateZone,

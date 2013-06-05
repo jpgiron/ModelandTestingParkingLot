@@ -3,35 +3,35 @@
 <!DOCTYPE DictionaryObjects SYSTEM "rtdsDictionaryObjects.dtd">
 
 <DictionaryObjects language="sdl" diagramType="prcs">
-<Signal id="SIG1" name="sOkInit">
-<InputSymbols>
-<SymbolReference symbolId="SYMB51"/>
-<SymbolReference symbolId="SYMB41"/>
-</InputSymbols>
-</Signal>
-<Signal id="SIG2" name="sInitFreeSpot">
-<SignalParameterType>Quant</SignalParameterType>
+<Signal id="SIG1" name="sErrorExcZones">
 <SendSymbols>
-<SymbolReference symbolId="SYMB38"/>
+<SymbolReference symbolId="SYMB29"/>
 </SendSymbols>
 </Signal>
-<Signal id="SIG3" name="sCreateZone">
+<Signal id="SIG2" name="sCreateZone">
 <SignalParameterType>Quant</SignalParameterType>
 <InputSymbols>
 <SymbolReference symbolId="SYMB5"/>
 </InputSymbols>
 </Signal>
-<Signal id="SIG4" name="sOkCreateZone">
+<Signal id="SIG3" name="sOkCreateZone">
 <SignalParameterType>PID</SignalParameterType>
 <SignalParameterType>Quant</SignalParameterType>
 <SendSymbols>
 <SymbolReference symbolId="SYMB7"/>
 </SendSymbols>
 </Signal>
-<Signal id="SIG5" name="sErrorExcZones">
+<Signal id="SIG4" name="sInitFreeSpot">
+<SignalParameterType>Quant</SignalParameterType>
 <SendSymbols>
-<SymbolReference symbolId="SYMB29"/>
+<SymbolReference symbolId="SYMB38"/>
 </SendSymbols>
+</Signal>
+<Signal id="SIG5" name="sOkInit">
+<InputSymbols>
+<SymbolReference symbolId="SYMB51"/>
+<SymbolReference symbolId="SYMB41"/>
+</InputSymbols>
 </Signal>
 <Signal id="SIG6" name="sInitTotalSpots">
 <SignalParameterType>Quant</SignalParameterType>
@@ -45,14 +45,14 @@
 </UsingSymbols>
 <Body>
 <SentSignals>
-<SignalReference id="SIG2"/>
+<SignalReference id="SIG1"/>
+<SignalReference id="SIG3"/>
 <SignalReference id="SIG4"/>
-<SignalReference id="SIG5"/>
 <SignalReference id="SIG6"/>
 </SentSignals>
 <ReceivedSignals>
-<SignalReference id="SIG1"/>
-<SignalReference id="SIG3"/>
+<SignalReference id="SIG2"/>
+<SignalReference id="SIG5"/>
 </ReceivedSignals>
 <Transitions>
 <Transition statesExcluded="FALSE" priorityInputNames="">
@@ -60,7 +60,7 @@
 <SymbolReference symbolId="SYMB5"/>
 </Transition>
 <Transition statesExcluded="FALSE" priorityInputNames="">
-<StateReference itemId="ITEM3"/>
+<StateReference itemId="ITEM6"/>
 <SymbolReference symbolId="SYMB41"/>
 </Transition>
 <Transition statesExcluded="FALSE" priorityInputNames="">
@@ -79,12 +79,9 @@
 <SymbolReference symbolId="SYMB8"/>
 </UsingSymbols>
 </Item>
-<Item id="ITEM3" type="state" name="WaitsOkZone" parentId="ITEM1" scope="none">
-<DefiningSymbols>
-<SymbolReference symbolId="SYMB40"/>
-</DefiningSymbols>
+<Item id="ITEM3" type="process" name="pZone" scope="block">
 <UsingSymbols>
-<SymbolReference symbolId="SYMB40"/>
+<SymbolReference symbolId="SYMB6"/>
 </UsingSymbols>
 </Item>
 <Item id="ITEM4" type="variable" name="QuantZone" parentId="ITEM1" scope="none" variableTypeName="INTEGER">
@@ -97,9 +94,12 @@
 <SymbolReference symbolId="SYMB9"/>
 </DefiningSymbols>
 </Item>
-<Item id="ITEM6" type="process" name="pZone" scope="block">
+<Item id="ITEM6" type="state" name="WaitsOkZone" parentId="ITEM1" scope="none">
+<DefiningSymbols>
+<SymbolReference symbolId="SYMB40"/>
+</DefiningSymbols>
 <UsingSymbols>
-<SymbolReference symbolId="SYMB6"/>
+<SymbolReference symbolId="SYMB40"/>
 </UsingSymbols>
 </Item>
 <Item id="ITEM7" type="state" name="WaitsOkInitTotalSpot" parentId="ITEM1" scope="none">

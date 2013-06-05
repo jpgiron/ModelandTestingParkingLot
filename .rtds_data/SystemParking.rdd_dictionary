@@ -150,7 +150,7 @@
 <SymbolReference symbolId="SYMB5"/>
 </UsingSymbols>
 <SignalWindow id="SIGWDW7" insideDiagram="TRUE">
-<ConnectorReference linkId="LINK78" isFrom="FALSE"/>
+<ConnectorReference linkId="LINK94" isFrom="FALSE"/>
 <Connections>
 <Connection name="cEnv_LCtrl"/>
 </Connections>
@@ -187,7 +187,7 @@
 <Channel name="cLCtrl_ZManager" fromSignalWindow="SIGWDW3" toSignalWindow="SIGWDW5"/>
 <Channel name="cEnv_Zone" fromSignalWindow="SIGWDW6" toSignalWindow="SIGWDW8"/>
 </Item>
-<Item id="ITEM10" type="type" name="TableInfoZones" parentId="ITEM1" scope="none">
+<Item id="ITEM10" type="type" name="TableInfoShow" parentId="ITEM1" scope="none">
 <DefiningSymbols>
 <SymbolReference symbolId="SYMB3"/>
 </DefiningSymbols>
@@ -200,7 +200,7 @@
 <SymbolReference symbolId="SYMB8"/>
 </UsingSymbols>
 <SignalWindow id="SIGWDW1" insideDiagram="FALSE">
-<ConnectorReference linkId="LINK78" isFrom="TRUE"/>
+<ConnectorReference linkId="LINK94" isFrom="TRUE"/>
 <SentSignals>
 <SignalReference id="SIG19"/>
 <SignalReference id="SIG25"/>
@@ -217,7 +217,7 @@
 </ReceivedSignals>
 </SignalWindow>
 <SignalWindow id="SIGWDW2" insideDiagram="FALSE">
-<ConnectorReference linkId="LINK92" isFrom="TRUE"/>
+<ConnectorReference linkId="LINK93" isFrom="TRUE"/>
 <SentSignals>
 <SignalReference id="SIG5"/>
 <SignalReference id="SIG24"/>
@@ -230,7 +230,7 @@
 </ReceivedSignals>
 </SignalWindow>
 <SignalWindow id="SIGWDW3" insideDiagram="FALSE">
-<ConnectorReference linkId="LINK90" isFrom="TRUE"/>
+<ConnectorReference linkId="LINK95" isFrom="TRUE"/>
 <SentSignals>
 <SignalReference id="SIG15"/>
 </SentSignals>
@@ -248,7 +248,7 @@
 <SymbolReference symbolId="SYMB9"/>
 </UsingSymbols>
 <SignalWindow id="SIGWDW4" insideDiagram="FALSE">
-<ConnectorReference linkId="LINK92" isFrom="FALSE"/>
+<ConnectorReference linkId="LINK93" isFrom="FALSE"/>
 <SentSignals>
 <SignalReference id="SIG9"/>
 <SignalReference id="SIG4"/>
@@ -261,7 +261,7 @@
 </ReceivedSignals>
 </SignalWindow>
 <SignalWindow id="SIGWDW5" insideDiagram="FALSE">
-<ConnectorReference linkId="LINK90" isFrom="FALSE"/>
+<ConnectorReference linkId="LINK95" isFrom="FALSE"/>
 <SentSignals>
 <SignalReference id="SIG1"/>
 <SignalReference id="SIG17"/>
@@ -281,22 +281,22 @@
 </ReceivedSignals>
 </SignalWindow>
 </Item>
-<Item id="ITEM2" type="type" name="TableGral" parentId="ITEM1" scope="none">
+<Item id="ITEM2" type="type" name="InfoCard" parentId="ITEM1" scope="none" isSyntype="TRUE">
 <DefiningSymbols>
 <SymbolReference symbolId="SYMB3"/>
 </DefiningSymbols>
 </Item>
-<Item id="ITEM3" type="type" name="ListPlates" parentId="ITEM1" scope="none">
+<Item id="ITEM3" type="type" name="TableGral" parentId="ITEM1" scope="none">
 <DefiningSymbols>
 <SymbolReference symbolId="SYMB3"/>
 </DefiningSymbols>
 </Item>
-<Item id="ITEM4" type="type" name="Quant" parentId="ITEM1" scope="none" isSyntype="TRUE">
+<Item id="ITEM4" type="type" name="TableInfoZones" parentId="ITEM1" scope="none">
 <DefiningSymbols>
 <SymbolReference symbolId="SYMB3"/>
 </DefiningSymbols>
 </Item>
-<Item id="ITEM5" type="type" name="InfoCard" parentId="ITEM1" scope="none" isSyntype="TRUE">
+<Item id="ITEM5" type="type" name="Zone" parentId="ITEM1" scope="none" isSyntype="TRUE">
 <DefiningSymbols>
 <SymbolReference symbolId="SYMB3"/>
 </DefiningSymbols>
@@ -306,17 +306,17 @@
 <SymbolReference symbolId="SYMB3"/>
 </DefiningSymbols>
 </Item>
-<Item id="ITEM7" type="type" name="Count" parentId="ITEM1" scope="none" isSyntype="TRUE">
+<Item id="ITEM7" type="type" name="Quant" parentId="ITEM1" scope="none" isSyntype="TRUE">
 <DefiningSymbols>
 <SymbolReference symbolId="SYMB3"/>
 </DefiningSymbols>
 </Item>
-<Item id="ITEM8" type="type" name="Zone" parentId="ITEM1" scope="none" isSyntype="TRUE">
+<Item id="ITEM8" type="type" name="Count" parentId="ITEM1" scope="none" isSyntype="TRUE">
 <DefiningSymbols>
 <SymbolReference symbolId="SYMB3"/>
 </DefiningSymbols>
 </Item>
-<Item id="ITEM9" type="type" name="TableInfoShow" parentId="ITEM1" scope="none">
+<Item id="ITEM9" type="type" name="ListPlates" parentId="ITEM1" scope="none">
 <DefiningSymbols>
 <SymbolReference symbolId="SYMB3"/>
 </DefiningSymbols>

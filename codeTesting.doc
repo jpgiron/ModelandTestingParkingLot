@@ -1,14 +1,17 @@
 module t_SystemParking_LCtrl
 {
   
-  /*  Paso 1  Definir los tipos de datos a usar en las senales */
-  
+  //Step 1 Define the type data that are in the signals
   type integer Quant;
   type integer zone;
   
-  //                        Paso 2
-  //       Definiendo las senales puras       
-  //   ----> Signals in/out bLocalCtrl VIA cEnv_LCtrl <-----
+  /*
+        ----> Signals in/out bLocalCtrl VIA cEnv_LCtrl <-----
+  
+  */           
+              
+                            //Step 2
+  // Defining pure signals
    
   type enumerated sReqInfoZones { e_sReqInfoZones }
   type enumerated sOkFreeSpot { e_sOkFreeSpot }
@@ -16,14 +19,9 @@ module t_SystemParking_LCtrl
   type enumerated sErrorFindingZone { e_sOkTotalPlaces }
   type enumerated sNoPossibleCreateZone { e_sOkTotalPlaces }
   type enumerated sZoneCreated { e_sZoneCreated}
-  type enumerated sIR1_Zone { e_sIR1_Zone }
-  type enumerated sIR2_Zone { e_sIR2_Zone } 
-  type enumerated sIR3_Zone { e_sIR3_Zone }
-  type enumerated sIR4_Zone { e_sIR4_Zone }
-  type enumerated sLoopInductive_Zone { e_sLoopInductive_Zone }
   
-  //                        Paso 3
-  //Definir las senales no puras     
+                            //Step 3
+  //Defining the no pure signals    
     
   type record sAddZone{
       
@@ -45,14 +43,15 @@ module t_SystemParking_LCtrl
         
   }
   
-   type record tInfoZone{
+  // Signal in to the tester
+  
+  type record tInfoZone{
         
         Quant tInfo
   
   }
   
-  //                    Paso 4
-  // Declarando los templates ---messages ---
+  // Declarating the templates - messages -
   
   template sAddZone a_sAddZone ( Quant p_QuantityPlaces ) := {
         
@@ -88,14 +87,8 @@ module t_SystemParking_LCtrl
   template sErrorFindingZone a_sErrorFindingZone := ?
   template sNoPossibleCreateZone a_sNoPossibleCreateZone := ?
   template sZoneCreated a_sZoneCreated := ? 
-  template sIR1_Zone a_sIR1_Zone := ?
-  template sIR2_Zone a_sIR2_Zone := ?
-  template sIR3_Zone a_sIR3_Zone := ?
-  template sIR4_Zone a_sIR4_Zone := ?
-  template sLoopInductive_Zone a_sLoopInductive_Zone := ?
   
-  //                        Paso 5 
-  // Crear el puerto en el cual viajan los mensajes
+                    // Step 4 "Creating ports"
   
   type port cEnv_LCtrl_type message{
   
@@ -112,6 +105,27 @@ module t_SystemParking_LCtrl
   
   };
   
+  /*
+  
+        -----> Signals in/out bZone VIA cEnv_Zone
+  
+  */
+  
+  
+  type enumerated sIR1_Zone { e_sIR1_Zone }
+  type enumerated sIR2_Zone { e_sIR2_Zone } 
+  type enumerated sIR3_Zone { e_sIR3_Zone }
+  type enumerated sIR4_Zone { e_sIR4_Zone }
+  type enumerated sLoopInductive_Zone { e_sLoopInductive_Zone }
+  
+  // Defining the templates --messages--
+  
+  template sIR1_Zone a_sIR1_Zone := ?
+  template sIR2_Zone a_sIR2_Zone := ?
+  template sIR3_Zone a_sIR3_Zone := ?
+  template sIR4_Zone a_sIR4_Zone := ?
+  template sLoopInductive_Zone a_sLoopInductive_Zone := ?
+  
   type port cEnv_Zone_type message{
   
         out sIR1_Zone;
@@ -122,10 +136,6 @@ module t_SystemParking_LCtrl
   
   };
   
-  //                Paso 6
-  // Declarar el componente al cual se le va hacer el Testing
-  
-  
   type component SystemParking{
         
         port cEnv_LCtrl_type cEnv_LCtrl
@@ -134,8 +144,6 @@ module t_SystemParking_LCtrl
   }
   
   /*        -----> TestCases <------            */
-  //                Paso 7
-  // Definiendo los caso de prueba
   
   testcase tc_EntryCarZone() runs on SystemParking
   {
@@ -160,12 +168,12 @@ module t_SystemParking_LCtrl
         cEnv_LCtrl.send(a_sAddZone(q));
         alt{
         []
-            cEnv_LCtrl.receive(a_sZoneCreated)      
+            cEnv_LCtrl.receive(a_sZoneCreated)      // If the Zone has been created correctly then de SystemParking will send the signal sZoneCreated
             {
                 setverdict(pass);
             }
         []
-            cEnv_LCtrl.receive(a_sNoPossibleCreateZone)
+            cEnv_LCtrl.receive(a_sNoPossibleCreateZone) // For this test there is one zone so that if the Tester want create another can not.
             {
                 setverdict(pass);
             }
@@ -257,8 +265,7 @@ module t_SystemParking_LCtrl
         stop;
   }
   
-  //                    Paso 8
-  // Definir la parte de control
+  
   
   control {
         
@@ -266,20 +273,21 @@ module t_SystemParking_LCtrl
         var integer v_count := 0;
         
         execute(tc_CreatingZone(v_MaxQuantityZone));
-        for( v_count := 0; v_count < 2; v_count:=v_count+1)
+        
+        for( v_count := 0; v_count < 12; v_count:=v_count+1)
         {
                 execute(tc_EntryCarZone());
         
         }
-        execute(tc_RequestInformationZone(8));
+        execute(tc_RequestInformationZone(0));
         
         
-        for( v_count := 0; v_count < 1; v_count:=v_count+1)
+        for( v_count := 0; v_count < 12; v_count:=v_count+1)
         {
                 execute(tc_OutCarZone());
         
         }
-        execute(tc_RequestInformationZone(9));
+        execute(tc_RequestInformationZone(10));
         execute(tc_SetTotalPlaces(15,0));
         execute(tc_SetFreeSpot(8,0));
         execute(tc_RequestInformationZone(8));

@@ -11,6 +11,11 @@
 <Description></Description>
 <Text></Text>
 
+<Symbol symbolId="SYMB10" type="mscCondition" xCenter="550" yCenter="396" fixedDimensions="FALSE" width="66" height="44" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text>Idle</Text>
+</Symbol>
+
 <Symbol symbolId="SYMB2" type="mscLifeline" xCenter="555" yCenter="287" fixedDimensions="TRUE" width="88" height="396" color="#000000" fillColor="#ffffff" dies="FALSE">
 <Description></Description>
 <Text>pZone(0)</Text>
@@ -48,6 +53,11 @@
 <Description></Description>
 <Text>pZone(1)</Text>
 <LifelineComponent type="norm" height="396" color="#000000"/>
+</Symbol>
+
+<Symbol symbolId="SYMB9" type="mscCondition" xCenter="550" yCenter="154" fixedDimensions="TRUE" width="88" height="44" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text>Idle</Text>
 </Symbol>
 </Symbol>
 
