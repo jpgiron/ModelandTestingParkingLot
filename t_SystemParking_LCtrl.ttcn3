@@ -212,6 +212,34 @@ module t_SystemParking_LCtrl
   
   }
   
+ 
+  
+ testcase tc_SetTotalPlaces(Quant q, zone z) runs on SystemParking
+  {
+        cEnv_LCtrl.send(a_sTotalPlaceZone(q,z));
+        alt{
+        
+        []
+            cEnv_LCtrl.receive(a_sOkTotalPlaces)
+            {
+                setverdict(pass);
+                
+            }
+        []
+            cEnv_LCtrl.receive(a_sErrorFindingZone)
+            {
+                setverdict(pass);
+                
+            }
+        [else]
+            {
+                
+                setverdict(fail);
+            }
+        }
+        stop;
+  }
+  
   testcase tc_SetFreeSpot(Quant q, zone z) runs on SystemParking
   {
         cEnv_LCtrl.send(a_sFreeSpotZone(q,z));
@@ -260,9 +288,9 @@ module t_SystemParking_LCtrl
         
         }
         execute(tc_RequestInformationZone(10));
-        //execute(tc_SetTotalPlaces(15,0));
-        //execute(tc_SetFreeSpot(8,0));
-        //execute(tc_RequestInformationZone(8));
+        execute(tc_SetTotalPlaces(15,0));
+        execute(tc_SetFreeSpot(8,0));
+        execute(tc_RequestInformationZone(8));
   }
    
 }
