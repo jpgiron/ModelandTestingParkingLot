@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE DictionaryObjects SYSTEM "rtdsDictionaryObjects.dtd">
+
+<DictionaryObjects language="sdl" diagramType="prcd">
+<Item id="ITEM1" type="procedure" name="pFindZone" scope="current">
+<UsingSymbols>
+<SymbolReference symbolId="SYMB2"/>
+</UsingSymbols>
+<Prototype>
+<Signature>pFindZone</Signature>
+<PrototypeSymbol>
+<SymbolReference symbolId="SYMB3"/>
+<PrototypeText>pFindZone</PrototypeText>
+</PrototypeSymbol>
+</Prototype>
+<Body>
+</Body>
+</Item>
+<Item id="ITEM2" type="variable" name="ZonePid" parentId="ITEM1" scope="none" variableTypeName="PID" isFormalParam="TRUE">
+<DefiningSymbols>
+<SymbolReference symbolId="SYMB6"/>
+</DefiningSymbols>
+</Item>
+<Item id="ITEM3" type="variable" name="PtrTmp" parentId="ITEM1" scope="none" variableTypeName="integer">
+<DefiningSymbols>
+<SymbolReference symbolId="SYMB6"/>
+</DefiningSymbols>
+</Item>
+<Item id="ITEM4" type="variable" name="LengthList" parentId="ITEM1" scope="none" variableTypeName="integer" isFormalParam="TRUE">
+<DefiningSymbols>
+<SymbolReference symbolId="SYMB6"/>
+</DefiningSymbols>
+</Item>
+<Item id="ITEM5" type="variable" name="ArrayZonePid" parentId="ITEM1" scope="none" variableTypeName="TableGral" isFormalParam="TRUE">
+<DefiningSymbols>
+<SymbolReference symbolId="SYMB6"/>
+</DefiningSymbols>
+</Item>
+</DictionaryObjects>

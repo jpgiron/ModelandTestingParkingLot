@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE DictionaryObjects SYSTEM "rtdsDictionaryObjects.dtd">
+
+<DictionaryObjects language="sdl" diagramType="prcd">
+<Item id="ITEM1" type="procedure" name="pSetupCounter" scope="current">
+<UsingSymbols>
+<SymbolReference symbolId="SYMB2"/>
+</UsingSymbols>
+<Prototype>
+<Signature>pSetupCounter</Signature>
+<PrototypeSymbol>
+<SymbolReference symbolId="SYMB3"/>
+<PrototypeText>pSetupCounter</PrototypeText>
+</PrototypeSymbol>
+</Prototype>
+<Body>
+</Body>
+</Item>
+</DictionaryObjects>

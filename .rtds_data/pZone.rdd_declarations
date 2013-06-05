@@ -1,0 +1,28 @@
+Ä}q(UversionqU4.3.2qUobjectq]q]q((crtds.editor.business.SyntaxChecker
+SyntaxTreeNodeAdapter
+qoq}q	(Utextq
+UCCounterFreeSpots , FreeSpots , CounterTotalSpots , TotalSpots QuantqU
+identifierqU2UtypeqUvardeclqUchildrenq]q((hoq}q(h
+UQuantqhU2hUtypenameqh]qU_SyntaxTreeNodeAdapter__parentqhub(crtds.editor.business.SyntaxChecker
+SyntaxTreeNode
+qoq}q(h
+UCounterFreeSpotsqhNhUsnglvardeclqh]q(hoq}q(h
+hhU2hUvarnameqh]q hhubaub(hoq!}q"(h
+U	FreeSpotsq#hNhhh]q$(hoq%}q&(h
+h#hU2hUvarnameq'h]q(hhubaub(hoq)}q*(h
+UCounterTotalSpotsq+hNhhh]q,(hoq-}q.(h
+h+hU2hUvarnameq/h]q0hhubaub(hoq1}q2(h
+U
+TotalSpotsq3hNhhh]q4(hoq5}q6(h
+h3hU2hUvarnameq7h]q8hhubaubeh(hoq9}q:(h
+UWDCL CounterFreeSpots , FreeSpots , CounterTotalSpots , TotalSpots Quant , PidZone Pid ;q;hU0hU	cmpnddeclq<h]q=(h(hoq>}q?(h
+UPidZone Pidq@hU3hUvardeclqAh]qB((hoqC}qD(h
+UPidqEhU3hUtypenameqFh]qGhh>ub(hoqH}qI(h
+UPidZoneqJhNhhh]qK(hoqL}qM(h
+hJhU3hUvarnameqNh]qOhh>ubaubehh9ubeh(hoqP}qQ(h
+UQDCL
+
+CounterFreeSpots,FreeSpots,CounterTotalSpots, TotalSpots Quant,
+PidZone Pid;qRhNhUdatadeclqSh]qTh9ahNubububcrtds.editor.business.ElementReference
+SymbolReference
+qU)ÅqV}qW(UprojectqXhXQUsymbolIdqYUSYMB42qZUdiagramFileNameq[Uqc:\documents and settings\virtual machine\mis documentos\dropbox\tdg\modelworking\parking_puj_cali vw 4\pzone.rddq\ubKáq]h>hU)Åq^}q_(hXhXQhYhZh[h\ubKáq`eÜqau.

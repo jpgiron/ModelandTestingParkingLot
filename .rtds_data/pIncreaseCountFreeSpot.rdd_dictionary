@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE DictionaryObjects SYSTEM "rtdsDictionaryObjects.dtd">
+
+<DictionaryObjects language="sdl" diagramType="prcd">
+<Item id="ITEM1" type="procedure" name="pIncreaseCountFreeSpot" scope="current">
+<UsingSymbols>
+<SymbolReference symbolId="SYMB2"/>
+</UsingSymbols>
+<Prototype>
+<Signature>pIncreaseCountFreeSpot</Signature>
+<PrototypeSymbol>
+<SymbolReference symbolId="SYMB3"/>
+<PrototypeText>pIncreaseCountFreeSpot</PrototypeText>
+</PrototypeSymbol>
+</Prototype>
+<Body>
+</Body>
+</Item>
+<Item id="ITEM2" type="variable" name="ZoneCounter" parentId="ITEM1" scope="none" variableTypeName="Quant" isFormalParam="TRUE">
+<DefiningSymbols>
+<SymbolReference symbolId="SYMB6"/>
+</DefiningSymbols>
+</Item>
+</DictionaryObjects>

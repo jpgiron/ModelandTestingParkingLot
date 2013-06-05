@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE Diagram SYSTEM "rtdsDiagram.dtd">
+
+<Diagram language="sdl" type="prcs" name="pZoneManager" showMsgData="full" linksCrossingAllowed="TRUE" cellWidthMm="4">
+
+<DiagramPartition name="Part. 0" nbPagesH="1" nbPagesV="2">
+<PageSpecification pageWidth="21.0" pageHeight="29.7" topMargin="0.0" bottomMargin="0.0" leftMargin="0.0" rightMargin="0.0" pageFooter="FALSE"/>
+
+<Symbol symbolId="SYMB1" type="sdlPrcsDgmFrm" xCenter="297" yCenter="841" fixedDimensions="TRUE" width="551" height="1617" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text></Text>
+
+<Symbol symbolId="SYMB10" type="sdlDecision" xCenter="242" yCenter="198" fixedDimensions="FALSE" width="242" height="44" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text>QuantZone &lt; NUM_MAX_ZONE</Text>
+</Symbol>
+
+<Symbol symbolId="SYMB2" type="sdlStart" xCenter="66" yCenter="33" fixedDimensions="TRUE" width="60" height="25" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text></Text>
+</Symbol>
+
+<Symbol symbolId="SYMB29" type="sdlSendSig" xCenter="473" yCenter="264" fixedDimensions="FALSE" width="132" height="44" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text>sErrorExcZones</Text>
+</Symbol>
+
+<Symbol symbolId="SYMB3" type="sdlState" xCenter="66" yCenter="154" fixedDimensions="FALSE" width="66" height="44" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text>Idle</Text>
+</Symbol>
+
+<Symbol symbolId="SYMB30" type="sdlState" xCenter="473" yCenter="341" fixedDimensions="FALSE" width="44" height="44" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text>-</Text>
+</Symbol>
+
+<Symbol symbolId="SYMB38" type="sdlSendSig" xCenter="242" yCenter="363" fixedDimensions="FALSE" width="220" height="44" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text>sInitFreeSpot(FSpots) TO 
+OFFSPRING</Text>
+</Symbol>
+
+<Symbol symbolId="SYMB4" type="sdlState" xCenter="242" yCenter="55" fixedDimensions="FALSE" width="66" height="44" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text>Idle</Text>
+</Symbol>
+
+<Symbol symbolId="SYMB40" type="sdlState" xCenter="242" yCenter="429" fixedDimensions="FALSE" width="110" height="44" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text>WaitsOkZone</Text>
+</Symbol>
+
+<Symbol symbolId="SYMB41" type="sdlInputSig" xCenter="242" yCenter="495" fixedDimensions="FALSE" width="88" height="44" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text>sOkInit</Text>
+</Symbol>
+
+<Symbol symbolId="SYMB42" type="sdlTask" xCenter="66" yCenter="88" fixedDimensions="FALSE" width="110" height="44" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text>QuantZone:=0</Text>
+</Symbol>
+
+<Symbol symbolId="SYMB43" type="sdlTask" xCenter="242" yCenter="825" fixedDimensions="FALSE" width="176" height="44" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text>QuantZone:=QuantZone+1</Text>
+</Symbol>
+
+<Symbol symbolId="SYMB49" type="sdlSendSig" xCenter="242" yCenter="572" fixedDimensions="FALSE" width="220" height="44" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text>sInitTotalSpots(FSpots) TO 
+SENDER</Text>
+</Symbol>
+
+<Symbol symbolId="SYMB5" type="sdlInputSig" xCenter="242" yCenter="132" fixedDimensions="FALSE" width="176" height="44" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text>sCreateZone(FSpots)</Text>
+</Symbol>
+
+<Symbol symbolId="SYMB50" type="sdlState" xCenter="242" yCenter="638" fixedDimensions="FALSE" width="176" height="44" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text>WaitsOkInitTotalSpot</Text>
+</Symbol>
+
+<Symbol symbolId="SYMB51" type="sdlInputSig" xCenter="242" yCenter="693" fixedDimensions="FALSE" width="88" height="44" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text>sOkInit</Text>
+</Symbol>
+
+<Symbol symbolId="SYMB6" type="sdlPrcsCreation" xCenter="242" yCenter="286" fixedDimensions="FALSE" width="66" height="44" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text>pZone</Text>
+</Symbol>
+
+<Symbol symbolId="SYMB7" type="sdlSendSig" xCenter="242" yCenter="759" fixedDimensions="FALSE" width="264" height="44" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text>sOkCreateZone(SENDER,FSpots) VIA
+cLCtrl_ZManager</Text>
+</Symbol>
+
+<Symbol symbolId="SYMB8" type="sdlState" xCenter="242" yCenter="891" fixedDimensions="FALSE" width="66" height="44" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text>Idle</Text>
+</Symbol>
+
+<Symbol symbolId="SYMB9" type="sdlText" xCenter="462" yCenter="44" fixedDimensions="FALSE" width="154" height="66" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text>DCL
+QuantZone INTEGER,
+FSpots FreeSpots;</Text>
+</Symbol>
+</Symbol>
+
+<Link linkId="LINK38" type="dec" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>false</Text>
+<Connector attachedSymbolId="SYMB10" type="void" isOutside="TRUE" side="y" position="0.0" endType="voidend">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB29" type="sdlarrow" isOutside="TRUE" side="x" position="0.0" endType="arrow">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+<LinkSegment orientation="h" length="231"/>
+<LinkSegment orientation="v" length="66"/>
+
+</Link>
+
+<Link linkId="LINK33" type="dec" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>true</Text>
+<Connector attachedSymbolId="SYMB10" type="void" isOutside="TRUE" side="x" position="0.0" endType="voidend">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB6" type="sdlarrow" isOutside="TRUE" side="x" position="0.0" endType="arrow">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+<LinkSegment orientation="v" length="88"/>
+
+</Link>
+
+<Link linkId="LINK56" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text></Text>
+<Connector attachedSymbolId="SYMB2" type="void" isOutside="TRUE" side="x" position="0.0" endType="voidend">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB42" type="sdlarrow" isOutside="TRUE" side="x" position="0.0" endType="arrow">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+<LinkSegment orientation="v" length="55"/>
+
+</Link>
+
+<Link linkId="LINK39" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text></Text>
+<Connector attachedSymbolId="SYMB29" type="void" isOutside="TRUE" side="x" position="0.0" endType="voidend">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB30" type="sdlarrow" isOutside="TRUE" side="x" position="0.0" endType="arrow">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+<LinkSegment orientation="v" length="77"/>
+
+</Link>
+
+<Link linkId="LINK64" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text></Text>
+<Connector attachedSymbolId="SYMB38" type="void" isOutside="TRUE" side="x" position="0.0" endType="voidend">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB40" type="sdlarrow" isOutside="TRUE" side="x" position="0.0" endType="arrow">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+<LinkSegment orientation="v" length="66"/>
+
+</Link>
+
+<Link linkId="LINK34" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text></Text>
+<Connector attachedSymbolId="SYMB4" type="void" isOutside="TRUE" side="x" position="0.0" endType="voidend">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB5" type="void" isOutside="TRUE" side="x" position="0.0" endType="voidend">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+<LinkSegment orientation="v" length="77"/>
+
+</Link>
+
+<Link linkId="LINK66" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text></Text>
+<Connector attachedSymbolId="SYMB40" type="void" isOutside="TRUE" side="x" position="0.0" endType="voidend">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB41" type="void" isOutside="TRUE" side="x" position="0.0" endType="voidend">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+<LinkSegment orientation="v" length="66"/>
+
+</Link>
+
+<Link linkId="LINK74" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text></Text>
+<Connector attachedSymbolId="SYMB41" type="void" isOutside="TRUE" side="x" position="0.0" endType="voidend">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB49" type="sdlarrow" isOutside="TRUE" side="x" position="0.0" endType="arrow">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+<LinkSegment orientation="v" length="77"/>
+
+</Link>
+
+<Link linkId="LINK57" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text></Text>
+<Connector attachedSymbolId="SYMB42" type="void" isOutside="TRUE" side="x" position="0.0" endType="voidend">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB3" type="sdlarrow" isOutside="TRUE" side="x" position="0.0" endType="arrow">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+<LinkSegment orientation="v" length="66"/>
+
+</Link>
+
+<Link linkId="LINK73" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text></Text>
+<Connector attachedSymbolId="SYMB43" type="void" isOutside="TRUE" side="x" position="0.0" endType="voidend">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB8" type="sdlarrow" isOutside="TRUE" side="x" position="0.0" endType="arrow">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+<LinkSegment orientation="v" length="66"/>
+
+</Link>
+
+<Link linkId="LINK76" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text></Text>
+<Connector attachedSymbolId="SYMB49" type="void" isOutside="TRUE" side="x" position="0.0" endType="voidend">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB50" type="sdlarrow" isOutside="TRUE" side="x" position="0.0" endType="arrow">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+<LinkSegment orientation="v" length="66"/>
+
+</Link>
+
+<Link linkId="LINK32" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text></Text>
+<Connector attachedSymbolId="SYMB5" type="void" isOutside="TRUE" side="x" position="0.0" endType="voidend">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB10" type="sdlarrow" isOutside="TRUE" side="x" position="0.0" endType="arrow">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+<LinkSegment orientation="v" length="66"/>
+
+</Link>
+
+<Link linkId="LINK80" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text></Text>
+<Connector attachedSymbolId="SYMB50" type="void" isOutside="TRUE" side="x" position="0.0" endType="voidend">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB51" type="void" isOutside="TRUE" side="x" position="0.0" endType="voidend">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+<LinkSegment orientation="v" length="55"/>
+
+</Link>
+
+<Link linkId="LINK79" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text></Text>
+<Connector attachedSymbolId="SYMB51" type="void" isOutside="TRUE" side="x" position="0.0" endType="voidend">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB7" type="sdlarrow" isOutside="TRUE" side="x" position="0.0" endType="arrow">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+<LinkSegment orientation="v" length="66"/>
+
+</Link>
+
+<Link linkId="LINK52" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text></Text>
+<Connector attachedSymbolId="SYMB6" type="void" isOutside="TRUE" side="x" position="0.0" endType="voidend">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB38" type="sdlarrow" isOutside="TRUE" side="x" position="0.0" endType="arrow">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+<LinkSegment orientation="v" length="77"/>
+
+</Link>
+
+<Link linkId="LINK72" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text></Text>
+<Connector attachedSymbolId="SYMB7" type="void" isOutside="TRUE" side="x" position="0.0" endType="voidend">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB43" type="sdlarrow" isOutside="TRUE" side="x" position="0.0" endType="arrow">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+<LinkSegment orientation="v" length="66"/>
+
+</Link>
+</DiagramPartition>
+
+</Diagram>

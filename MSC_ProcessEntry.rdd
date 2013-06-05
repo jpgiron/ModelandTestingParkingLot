@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE Diagram SYSTEM "rtdsDiagram.dtd">
+
+<Diagram language="sdl" type="msc" name="MSC_ProcessEntry" showMsgData="full" linksCrossingAllowed="FALSE" cellWidthMm="4">
+
+<DiagramPartition name="Part. 0" nbPagesH="2" nbPagesV="1">
+<PageSpecification pageWidth="21.0" pageHeight="29.7" topMargin="0.0" bottomMargin="0.0" leftMargin="0.0" rightMargin="0.0" pageFooter="FALSE"/>
+
+<Symbol symbolId="SYMB1" type="mscExternalFrm" xCenter="595" yCenter="420" fixedDimensions="TRUE" width="1146" height="775" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text></Text>
+
+<Symbol symbolId="SYMB25" type="mscCondition" xCenter="253" yCenter="484" fixedDimensions="FALSE" width="110" height="44" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text>WaitPassCar</Text>
+</Symbol>
+
+<Symbol symbolId="SYMB27" type="mscLifeline" xCenter="517" yCenter="385" fixedDimensions="TRUE" width="44" height="748" color="#000000" fillColor="#ffffff" dies="FALSE">
+<Description></Description>
+<Text>OCR</Text>
+<LifelineComponent type="norm" height="275" color="#000000"/>
+<LifelineComponent type="meth" height="33" color="#000000"/>
+<LifelineComponent type="norm" height="440" color="#000000"/>
+</Symbol>
+
+<Symbol symbolId="SYMB28" type="mscLifeline" xCenter="253" yCenter="385" fixedDimensions="TRUE" width="110" height="748" color="#000000" fillColor="#ffffff" dies="FALSE">
+<Description></Description>
+<Text>pVerificator</Text>
+<LifelineComponent type="norm" height="330" color="#000000"/>
+<LifelineComponent type="act" height="33" color="#000000" width="154">
+<Text>ProcVerification</Text>
+</LifelineComponent>
+<LifelineComponent type="norm" height="385" color="#000000"/>
+</Symbol>
+
+<Symbol symbolId="SYMB30" type="mscLifeline" xCenter="55" yCenter="385" fixedDimensions="TRUE" width="44" height="748" color="#000000" fillColor="#ffffff" dies="FALSE">
+<Description></Description>
+<Text>Env</Text>
+<LifelineComponent type="norm" height="748" color="#000000"/>
+</Symbol>
+
+<Symbol symbolId="SYMB31" type="mscLifeline" xCenter="407" yCenter="385" fixedDimensions="TRUE" width="88" height="748" color="#000000" fillColor="#ffffff" dies="FALSE">
+<Description></Description>
+<Text>ReaderCard</Text>
+<LifelineComponent type="norm" height="748" color="#000000"/>
+</Symbol>
+
+<Symbol symbolId="SYMB32" type="mscCondition" xCenter="407" yCenter="88" fixedDimensions="TRUE" width="88" height="44" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text>WaitCard</Text>
+</Symbol>
+
+<Symbol symbolId="SYMB43" type="mscCondition" xCenter="253" yCenter="693" fixedDimensions="FALSE" width="66" height="44" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text>Idle</Text>
+</Symbol>
+
+<Symbol symbolId="SYMB44" type="mscCondition" xCenter="407" yCenter="693" fixedDimensions="FALSE" width="66" height="44" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text>Idle</Text>
+</Symbol>
+
+<Symbol symbolId="SYMB45" type="mscCondition" xCenter="517" yCenter="693" fixedDimensions="FALSE" width="66" height="44" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text>Idle</Text>
+</Symbol>
+
+<Symbol symbolId="SYMB46" type="mscComment" xCenter="869" yCenter="165" fixedDimensions="FALSE" width="506" height="44" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text>sVerify is a signal that go to DataBase and sValidated is a signal 
+that coming of the block DataBase</Text>
+</Symbol>
+
+<Symbol symbolId="SYMB47" type="mscComment" xCenter="814" yCenter="297" fixedDimensions="FALSE" width="418" height="44" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text>This procedure return the plate of the car since a photo,
+the data type that return is a charstring</Text>
+</Symbol>
+</Symbol>
+
+<Link linkId="LINK92" type="msg" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>sPhoto(charstring)</Text>
+<Connector attachedSymbolId="SYMB27" type="mscvoid" isOutside="TRUE" side="y" position="-0.147058823529" endType="voidend">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB28" type="mscvoid" isOutside="TRUE" side="y" position="-0.147058823529" endType="arrow">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+
+</Link>
+
+<Link linkId="LINK97" type="msg" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>sTakePhoto</Text>
+<Connector attachedSymbolId="SYMB28" type="mscvoid" isOutside="TRUE" side="y" position="-0.294117647059" endType="voidend">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB27" type="mscvoid" isOutside="TRUE" side="y" position="-0.294117647059" endType="arrow">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+
+</Link>
+
+<Link linkId="LINK100" type="msg" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>sVerify(Card)</Text>
+<Connector attachedSymbolId="SYMB28" type="mscvoid" isOutside="TRUE" side="y" position="-0.5" endType="voidend">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB30" type="mscvoid" isOutside="TRUE" side="y" position="-0.5" endType="arrow">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+
+</Link>
+
+<Link linkId="LINK99" type="msg" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>sUpBarrier</Text>
+<Connector attachedSymbolId="SYMB28" type="mscvoid" isOutside="TRUE" side="y" position="0.117647058824" endType="voidend">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB30" type="mscvoid" isOutside="TRUE" side="y" position="0.117647058824" endType="arrow">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+
+</Link>
+
+<Link linkId="LINK95" type="msg" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>sDownBarrier</Text>
+<Connector attachedSymbolId="SYMB28" type="mscvoid" isOutside="TRUE" side="y" position="0.588235294118" endType="voidend">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB30" type="mscvoid" isOutside="TRUE" side="y" position="0.588235294118" endType="arrow">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+
+</Link>
+
+<Link linkId="LINK94" type="msg" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>sIREntry</Text>
+<Connector attachedSymbolId="SYMB30" type="mscvoid" isOutside="TRUE" side="y" position="0.411764705882" endType="voidend">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB28" type="mscvoid" isOutside="TRUE" side="y" position="0.411764705882" endType="arrow">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+
+</Link>
+
+<Link linkId="LINK96" type="msg" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>sLoopInductive2</Text>
+<Connector attachedSymbolId="SYMB30" type="mscvoid" isOutside="TRUE" side="y" position="0.5" endType="voidend">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB28" type="mscvoid" isOutside="TRUE" side="y" position="0.5" endType="arrow">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+
+</Link>
+
+<Link linkId="LINK98" type="msg" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>sValidated(ListPlates)</Text>
+<Connector attachedSymbolId="SYMB30" type="mscvoid" isOutside="TRUE" side="y" position="-0.352941176471" endType="voidend">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB28" type="mscvoid" isOutside="TRUE" side="y" position="-0.352941176471" endType="arrow">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+
+</Link>
+
+<Link linkId="LINK81" type="msg" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>sUserCard(InfoCard)</Text>
+<Connector attachedSymbolId="SYMB30" type="mscvoid" isOutside="TRUE" side="y" position="-0.676470588235" endType="voidend">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB31" type="mscvoid" isOutside="TRUE" side="y" position="-0.676470588235" endType="arrow">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+
+</Link>
+
+<Link linkId="LINK93" type="msg" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>sDataCard(int)</Text>
+<Connector attachedSymbolId="SYMB31" type="mscvoid" isOutside="TRUE" side="y" position="-0.588235294118" endType="voidend">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB28" type="mscvoid" isOutside="TRUE" side="y" position="-0.588235294118" endType="arrow">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+
+</Link>
+</DiagramPartition>
+
+</Diagram>

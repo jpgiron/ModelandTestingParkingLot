@@ -1,0 +1,268 @@
+module t_SystemParking_LCtrl
+{
+  
+  //Step 1 Define the type data that are in the signals
+  type integer Quant;
+  type integer zone;
+  
+  /*
+        ----> Signals in/out bLocalCtrl VIA cEnv_LCtrl <-----
+  
+  */           
+              
+                            //Step 2
+  // Defining pure signals
+   
+  type enumerated sReqInfoZones { e_sReqInfoZones }
+  type enumerated sOkFreeSpot { e_sOkFreeSpot }
+  type enumerated sOkTotalPlaces { e_sOkTotalPlaces }
+  type enumerated sErrorFindingZone { e_sOkTotalPlaces }
+  type enumerated sNoPossibleCreateZone { e_sOkTotalPlaces }
+  type enumerated sZoneCreated { e_sZoneCreated}
+  
+                            //Step 3
+  //Defining the no pure signals    
+    
+  type record sAddZone{
+      
+        Quant QuantityPlaces  
+  
+  }
+  
+  type record sFreeSpotZone{
+  
+        Quant QuantityPlaces,
+        zone ZoneSel
+        
+  }
+  
+  type record sTotalPlaceZone{
+  
+        Quant QuantityPlaces,
+        zone ZoneSel
+        
+  }
+  
+  // Signal in to the tester
+  
+  type record tInfoZone{
+        
+        Quant tInfo
+  
+  }
+  
+  // Declarating the templates - messages -
+  
+  template sAddZone a_sAddZone ( Quant p_QuantityPlaces ) := {
+        
+        QuantityPlaces := p_QuantityPlaces
+  
+  }
+  
+  template sFreeSpotZone a_sFreeSpotZone ( Quant p_QuantityPlaces, zone p_Zone) := {
+        
+        QuantityPlaces := p_QuantityPlaces,
+        ZoneSel :=  p_Zone
+  
+  }
+  
+  template sTotalPlaceZone a_sTotalPlaceZone ( Quant p_QuantityPlaces, zone p_Zone) :=  {
+        
+        QuantityPlaces := p_QuantityPlaces,
+        ZoneSel :=  p_Zone
+  
+  }
+  
+ 
+  template tInfoZone a_tInfoZone ( Quant p_tInfo ) := {
+        
+        tInfo := p_tInfo  
+        
+  }
+
+  
+  template sReqInfoZones a_sReqInfoZones := ?
+  template sOkFreeSpot a_sOkFreeSpot := ?
+  template sOkTotalPlaces a_sOkTotalPlaces := ?
+  template sErrorFindingZone a_sErrorFindingZone := ?
+  template sNoPossibleCreateZone a_sNoPossibleCreateZone := ?
+  template sZoneCreated a_sZoneCreated := ? 
+  
+                    // Step 4 "Creating ports"
+  
+  type port cEnv_LCtrl_type message{
+  
+        out sFreeSpotZone;
+        out sTotalPlaceZone;
+        out sReqInfoZones;
+        out sAddZone;
+        in sOkFreeSpot;
+        in sOkTotalPlaces;
+        in sErrorFindingZone;
+        in sNoPossibleCreateZone;
+        in sZoneCreated;
+        in tInfoZone 
+  
+  };
+  
+  /*
+  
+        -----> Signals in/out bZone VIA cEnv_Zone
+  
+  */
+  
+  
+  type enumerated sIR1_Zone { e_sIR1_Zone }
+  type enumerated sIR2_Zone { e_sIR2_Zone } 
+  type enumerated sIR3_Zone { e_sIR3_Zone }
+  type enumerated sIR4_Zone { e_sIR4_Zone }
+  type enumerated sLoopInductive_Zone { e_sLoopInductive_Zone }
+  
+  // Defining the templates --messages--
+  
+  template sIR1_Zone a_sIR1_Zone := ?
+  template sIR2_Zone a_sIR2_Zone := ?
+  template sIR3_Zone a_sIR3_Zone := ?
+  template sIR4_Zone a_sIR4_Zone := ?
+  template sLoopInductive_Zone a_sLoopInductive_Zone := ?
+  
+  type port cEnv_Zone_type message{
+  
+        out sIR1_Zone;
+        out sIR1_Zone;
+        out sIR1_Zone;
+        out sIR1_Zone;
+        out sLoopInductive_Zone
+  
+  };
+  
+  type component SystemParking{
+        
+        port cEnv_LCtrl_type cEnv_LCtrl
+        port cEnv_Zone_type cEnv_Zone
+  
+  }
+  
+  /*        -----> TestCases <------            */
+  
+  testcase tc_EntryCarZone() runs on SystemParking
+  {
+        cEnv_Zone.send(a_sIR1_Zone);
+        cEnv_Zone.send(a_sIR2_Zone);
+        cEnv_Zone.send(a_sLoopInductive_Zone);
+        setverdict(pass);
+        stop;    
+  }
+  
+  testcase tc_OutCarZone() runs on SystemParking
+  {
+        cEnv_Zone.send(a_sIR3_Zone);
+        cEnv_Zone.send(a_sIR4_Zone);
+        cEnv_Zone.send(a_sLoopInductive_Zone);
+        setverdict(pass);
+        stop;    
+  }  
+  
+  testcase tc_CreatingZone(Quant q) runs on SystemParking
+  {
+        cEnv_LCtrl.send(a_sAddZone(q));
+        alt{
+        []
+            cEnv_LCtrl.receive(a_sZoneCreated)      // If the Zone has been created correctly then de SystemParking will send the signal sZoneCreated
+            {
+                setverdict(pass);
+            }
+        []
+            cEnv_LCtrl.receive(a_sNoPossibleCreateZone) // For this test there is one zone so that if the Tester want create another can not.
+            {
+                setverdict(pass);
+            }
+        }
+        stop;
+  
+  }
+  
+  testcase tc_RequestInformationZone(Quant q) runs on SystemParking
+  {
+        cEnv_LCtrl.send(a_sReqInfoZones);
+        alt
+        {
+        []
+            cEnv_LCtrl.receive(a_tInfoZone(q))
+            {
+                setverdict(pass);
+                stop;
+            }
+            
+        []
+            cEnv_LCtrl.receive(a_sErrorFindingZone)
+            {
+                setverdict(pass);
+                stop;
+            }
+       
+        
+        [else]
+            {
+            setverdict(fail);
+        
+            }
+        }
+        stop;
+  
+  }
+  
+  testcase tc_SetFreeSpot(Quant q, zone z) runs on SystemParking
+  {
+        cEnv_LCtrl.send(a_sFreeSpotZone(q,z));
+        alt{
+        
+        []
+            cEnv_LCtrl.receive(a_sOkFreeSpot)
+            {
+                setverdict(pass);
+                
+            }
+        []
+            cEnv_LCtrl.receive(a_sErrorFindingZone)
+            {
+                setverdict(pass);
+                
+            }
+        [else]
+            {
+                setverdict(fail);
+            }
+        }
+        stop;
+  }
+  
+  
+  
+  control {
+        
+        var integer v_MaxQuantityZone := 10;
+        var integer v_count := 0;
+        
+        execute(tc_CreatingZone(v_MaxQuantityZone));
+        
+        for( v_count := 0; v_count < 12; v_count:=v_count+1)
+        {
+                execute(tc_EntryCarZone());
+        
+        }
+        execute(tc_RequestInformationZone(0));
+        
+        
+        for( v_count := 0; v_count < 12; v_count:=v_count+1)
+        {
+                execute(tc_OutCarZone());
+        
+        }
+        execute(tc_RequestInformationZone(10));
+        //execute(tc_SetTotalPlaces(15,0));
+        //execute(tc_SetFreeSpot(8,0));
+        //execute(tc_RequestInformationZone(8));
+  }
+   
+}

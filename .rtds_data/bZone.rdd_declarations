@@ -1,0 +1,15 @@
+€}q(UversionqU4.3.2qUobjectq]q((crtds.editor.business.SyntaxChecker
+SyntaxTreeNodeAdapter
+qoq}q(Utextq	UNUM_MAX_ZONE INTEGER = 1q
+U
+identifierqU2UtypeqUsynonymdeclqUchildrenq]q((hoq}q(h	UINTEGERqhU2hUtypenameqh]qU_SyntaxTreeNodeAdapter__parentq(hoq}q(h	h
+hU2hhhhh(hoq}q(h	h
+hU2hhhhhhububub(crtds.editor.business.SyntaxChecker
+SyntaxTreeNode
+qoq}q(h	UNUM_MAX_ZONE = 1qhNhUsnglsynonymdeclqh]q((hoq }q!(h	UNUM_MAX_ZONEq"hU2hUsynonymnameq#h]q$hhub(hoq%}q&(h	U1hU2hU
+synonymvalq'h]q((hoq)}q*(h	U1hU2hUnbexprq+h]q,hh%ubahhubeubeh(hoq-}q.(h	U]/* DEFINITIONS */
+
+SYNONYM NUM_MAX_ZONE INTEGER = 1;
+
+SYNTYPE FreeSpots = INTEGER
+ENDSYNTYPE;q/hNhUdatadeclq0h]q1(h(hoq2}q3(h	U FreeSpots = INTEGER ENDSYNTYPE ;q4hU4hUsyntypedeclq5h]q6((hoq7}q8(h	U	FreeSpotsq9hU4hUsyntypenameq:h]q;h(hoq<}q=(h	h4hU4hh5hh6hh2ubub(hoq>}q?(h	UINTEGERq@hU4hUtypenameqAh]qBhh<ubehh-ubehNububh2eu.

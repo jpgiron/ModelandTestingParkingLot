@@ -1,0 +1,415 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE DictionaryObjects SYSTEM "rtdsDictionaryObjects.dtd">
+
+<DictionaryObjects language="sdl">
+<Item id="ITEM1" type="ttcn_module" name="t_SystemParking_LCtrl" scope="current">
+</Item>
+<Item id="ITEM10" type="ttcn_test_case" name="tc_OutCarZone" parentId="ITEM1" scope="none" runsOn="ITEM5" systemInterface="ITEM5">
+</Item>
+<Item id="ITEM11" type="type" name="sFreeSpotZone" parentId="ITEM1" scope="none">
+</Item>
+<Item id="ITEM12" type="ttcn_test_case" name="tc_CreatingZone" parentId="ITEM1" scope="none" runsOn="ITEM5" systemInterface="ITEM5">
+</Item>
+<Item id="ITEM13" type="variable" name="RTDS_param1" parentId="ITEM12" scope="none" variableTypeName="Quant" isFormalParam="TRUE">
+</Item>
+<Item id="ITEM14" type="ttcn_port_type" name="cEnv_Zone_type" parentId="ITEM1" scope="none">
+<TtcnPortTypeElement way="out" typeId="ITEM15"/>
+<TtcnPortTypeElement way="out" typeId="ITEM15"/>
+<TtcnPortTypeElement way="out" typeId="ITEM15"/>
+<TtcnPortTypeElement way="out" typeId="ITEM15"/>
+<TtcnPortTypeElement way="out" typeId="ITEM16"/>
+<TtcnPortTypeElement way="out" typeId="ITEM15"/>
+<TtcnPortTypeElement way="out" typeId="ITEM15"/>
+<TtcnPortTypeElement way="out" typeId="ITEM15"/>
+<TtcnPortTypeElement way="out" typeId="ITEM15"/>
+<TtcnPortTypeElement way="out" typeId="ITEM16"/>
+<TtcnPortTypeElement way="out" typeId="ITEM15"/>
+<TtcnPortTypeElement way="out" typeId="ITEM15"/>
+<TtcnPortTypeElement way="out" typeId="ITEM15"/>
+<TtcnPortTypeElement way="out" typeId="ITEM15"/>
+<TtcnPortTypeElement way="out" typeId="ITEM16"/>
+<TtcnPortTypeElement way="out" typeId="ITEM15"/>
+<TtcnPortTypeElement way="out" typeId="ITEM15"/>
+<TtcnPortTypeElement way="out" typeId="ITEM15"/>
+<TtcnPortTypeElement way="out" typeId="ITEM15"/>
+<TtcnPortTypeElement way="out" typeId="ITEM16"/>
+<TtcnPortTypeElement way="out" typeId="ITEM15"/>
+<TtcnPortTypeElement way="out" typeId="ITEM15"/>
+<TtcnPortTypeElement way="out" typeId="ITEM15"/>
+<TtcnPortTypeElement way="out" typeId="ITEM15"/>
+<TtcnPortTypeElement way="out" typeId="ITEM16"/>
+<TtcnPortTypeElement way="out" typeId="ITEM15"/>
+<TtcnPortTypeElement way="out" typeId="ITEM15"/>
+<TtcnPortTypeElement way="out" typeId="ITEM15"/>
+<TtcnPortTypeElement way="out" typeId="ITEM15"/>
+<TtcnPortTypeElement way="out" typeId="ITEM16"/>
+</Item>
+<Item id="ITEM15" type="type" name="sIR1_Zone" parentId="ITEM1" scope="none">
+</Item>
+<Item id="ITEM16" type="type" name="sLoopInductive_Zone" parentId="ITEM1" scope="none">
+</Item>
+<Item id="ITEM17" type="ttcn_port" name="cEnv_Zone" parentId="ITEM5" scope="none" instanciatedTypeId="ITEM14">
+</Item>
+<Item id="ITEM18" type="ttcn_port" name="cEnv_LCtrl" parentId="ITEM5" scope="none" instanciatedTypeId="ITEM19">
+</Item>
+<Item id="ITEM19" type="ttcn_port_type" name="cEnv_LCtrl_type" parentId="ITEM1" scope="none">
+<TtcnPortTypeElement way="out" typeId="ITEM20"/>
+<TtcnPortTypeElement way="in" typeId="ITEM2"/>
+<TtcnPortTypeElement way="in" typeId="ITEM21"/>
+<TtcnPortTypeElement way="in" typeId="ITEM22"/>
+<TtcnPortTypeElement way="in" typeId="ITEM23"/>
+<TtcnPortTypeElement way="in" typeId="ITEM24"/>
+<TtcnPortTypeElement way="out" typeId="ITEM20"/>
+<TtcnPortTypeElement way="in" typeId="ITEM2"/>
+<TtcnPortTypeElement way="in" typeId="ITEM21"/>
+<TtcnPortTypeElement way="in" typeId="ITEM22"/>
+<TtcnPortTypeElement way="in" typeId="ITEM23"/>
+<TtcnPortTypeElement way="in" typeId="ITEM24"/>
+<TtcnPortTypeElement way="out" typeId="ITEM20"/>
+<TtcnPortTypeElement way="in" typeId="ITEM2"/>
+<TtcnPortTypeElement way="in" typeId="ITEM21"/>
+<TtcnPortTypeElement way="in" typeId="ITEM22"/>
+<TtcnPortTypeElement way="in" typeId="ITEM23"/>
+<TtcnPortTypeElement way="in" typeId="ITEM24"/>
+<TtcnPortTypeElement way="out" typeId="ITEM20"/>
+<TtcnPortTypeElement way="in" typeId="ITEM2"/>
+<TtcnPortTypeElement way="in" typeId="ITEM21"/>
+<TtcnPortTypeElement way="in" typeId="ITEM22"/>
+<TtcnPortTypeElement way="in" typeId="ITEM23"/>
+<TtcnPortTypeElement way="in" typeId="ITEM24"/>
+<TtcnPortTypeElement way="out" typeId="ITEM20"/>
+<TtcnPortTypeElement way="in" typeId="ITEM2"/>
+<TtcnPortTypeElement way="in" typeId="ITEM21"/>
+<TtcnPortTypeElement way="in" typeId="ITEM22"/>
+<TtcnPortTypeElement way="in" typeId="ITEM23"/>
+<TtcnPortTypeElement way="out" typeId="ITEM11"/>
+<TtcnPortTypeElement way="out" typeId="ITEM25"/>
+<TtcnPortTypeElement way="out" typeId="ITEM20"/>
+<TtcnPortTypeElement way="in" typeId="ITEM2"/>
+<TtcnPortTypeElement way="in" typeId="ITEM21"/>
+<TtcnPortTypeElement way="in" typeId="ITEM22"/>
+<TtcnPortTypeElement way="in" typeId="ITEM23"/>
+<TtcnPortTypeElement way="out" typeId="ITEM11"/>
+<TtcnPortTypeElement way="out" typeId="ITEM25"/>
+<TtcnPortTypeElement way="out" typeId="ITEM20"/>
+<TtcnPortTypeElement way="in" typeId="ITEM2"/>
+<TtcnPortTypeElement way="in" typeId="ITEM21"/>
+<TtcnPortTypeElement way="in" typeId="ITEM22"/>
+<TtcnPortTypeElement way="in" typeId="ITEM23"/>
+<TtcnPortTypeElement way="out" typeId="ITEM11"/>
+<TtcnPortTypeElement way="out" typeId="ITEM25"/>
+<TtcnPortTypeElement way="out" typeId="ITEM20"/>
+<TtcnPortTypeElement way="in" typeId="ITEM2"/>
+<TtcnPortTypeElement way="in" typeId="ITEM21"/>
+<TtcnPortTypeElement way="in" typeId="ITEM22"/>
+<TtcnPortTypeElement way="in" typeId="ITEM23"/>
+<TtcnPortTypeElement way="out" typeId="ITEM11"/>
+<TtcnPortTypeElement way="out" typeId="ITEM25"/>
+<TtcnPortTypeElement way="out" typeId="ITEM20"/>
+<TtcnPortTypeElement way="in" typeId="ITEM2"/>
+<TtcnPortTypeElement way="in" typeId="ITEM21"/>
+<TtcnPortTypeElement way="in" typeId="ITEM22"/>
+<TtcnPortTypeElement way="in" typeId="ITEM23"/>
+<TtcnPortTypeElement way="out" typeId="ITEM11"/>
+<TtcnPortTypeElement way="out" typeId="ITEM25"/>
+<TtcnPortTypeElement way="out" typeId="ITEM20"/>
+<TtcnPortTypeElement way="in" typeId="ITEM2"/>
+<TtcnPortTypeElement way="in" typeId="ITEM21"/>
+<TtcnPortTypeElement way="in" typeId="ITEM22"/>
+<TtcnPortTypeElement way="in" typeId="ITEM23"/>
+<TtcnPortTypeElement way="out" typeId="ITEM11"/>
+<TtcnPortTypeElement way="out" typeId="ITEM25"/>
+<TtcnPortTypeElement way="out" typeId="ITEM20"/>
+<TtcnPortTypeElement way="in" typeId="ITEM2"/>
+<TtcnPortTypeElement way="in" typeId="ITEM21"/>
+<TtcnPortTypeElement way="in" typeId="ITEM22"/>
+<TtcnPortTypeElement way="in" typeId="ITEM23"/>
+<TtcnPortTypeElement way="out" typeId="ITEM11"/>
+<TtcnPortTypeElement way="out" typeId="ITEM25"/>
+<TtcnPortTypeElement way="out" typeId="ITEM8"/>
+<TtcnPortTypeElement way="out" typeId="ITEM20"/>
+<TtcnPortTypeElement way="in" typeId="ITEM2"/>
+<TtcnPortTypeElement way="in" typeId="ITEM21"/>
+<TtcnPortTypeElement way="in" typeId="ITEM22"/>
+<TtcnPortTypeElement way="in" typeId="ITEM23"/>
+<TtcnPortTypeElement way="out" typeId="ITEM11"/>
+<TtcnPortTypeElement way="out" typeId="ITEM25"/>
+<TtcnPortTypeElement way="out" typeId="ITEM8"/>
+<TtcnPortTypeElement way="out" typeId="ITEM20"/>
+<TtcnPortTypeElement way="in" typeId="ITEM2"/>
+<TtcnPortTypeElement way="in" typeId="ITEM21"/>
+<TtcnPortTypeElement way="in" typeId="ITEM22"/>
+<TtcnPortTypeElement way="in" typeId="ITEM23"/>
+<TtcnPortTypeElement way="out" typeId="ITEM11"/>
+<TtcnPortTypeElement way="out" typeId="ITEM25"/>
+<TtcnPortTypeElement way="out" typeId="ITEM8"/>
+<TtcnPortTypeElement way="out" typeId="ITEM20"/>
+<TtcnPortTypeElement way="in" typeId="ITEM2"/>
+<TtcnPortTypeElement way="in" typeId="ITEM21"/>
+<TtcnPortTypeElement way="in" typeId="ITEM22"/>
+<TtcnPortTypeElement way="in" typeId="ITEM23"/>
+<TtcnPortTypeElement way="out" typeId="ITEM11"/>
+<TtcnPortTypeElement way="out" typeId="ITEM25"/>
+<TtcnPortTypeElement way="out" typeId="ITEM8"/>
+<TtcnPortTypeElement way="out" typeId="ITEM20"/>
+<TtcnPortTypeElement way="in" typeId="ITEM2"/>
+<TtcnPortTypeElement way="in" typeId="ITEM21"/>
+<TtcnPortTypeElement way="in" typeId="ITEM22"/>
+<TtcnPortTypeElement way="in" typeId="ITEM23"/>
+<TtcnPortTypeElement way="out" typeId="ITEM11"/>
+<TtcnPortTypeElement way="out" typeId="ITEM25"/>
+<TtcnPortTypeElement way="out" typeId="ITEM8"/>
+<TtcnPortTypeElement way="out" typeId="ITEM20"/>
+<TtcnPortTypeElement way="in" typeId="ITEM2"/>
+<TtcnPortTypeElement way="in" typeId="ITEM21"/>
+<TtcnPortTypeElement way="in" typeId="ITEM22"/>
+<TtcnPortTypeElement way="in" typeId="ITEM23"/>
+<TtcnPortTypeElement way="out" typeId="ITEM11"/>
+<TtcnPortTypeElement way="out" typeId="ITEM25"/>
+<TtcnPortTypeElement way="out" typeId="ITEM8"/>
+<TtcnPortTypeElement way="out" typeId="ITEM20"/>
+<TtcnPortTypeElement way="in" typeId="ITEM2"/>
+<TtcnPortTypeElement way="in" typeId="ITEM21"/>
+<TtcnPortTypeElement way="in" typeId="ITEM22"/>
+<TtcnPortTypeElement way="in" typeId="ITEM23"/>
+<TtcnPortTypeElement way="out" typeId="ITEM11"/>
+<TtcnPortTypeElement way="out" typeId="ITEM25"/>
+<TtcnPortTypeElement way="out" typeId="ITEM8"/>
+<TtcnPortTypeElement way="out" typeId="ITEM20"/>
+<TtcnPortTypeElement way="in" typeId="ITEM2"/>
+<TtcnPortTypeElement way="in" typeId="ITEM21"/>
+<TtcnPortTypeElement way="in" typeId="ITEM22"/>
+<TtcnPortTypeElement way="in" typeId="ITEM23"/>
+<TtcnPortTypeElement way="in" typeId="ITEM26"/>
+<TtcnPortTypeElement way="out" typeId="ITEM11"/>
+<TtcnPortTypeElement way="out" typeId="ITEM25"/>
+<TtcnPortTypeElement way="out" typeId="ITEM8"/>
+<TtcnPortTypeElement way="out" typeId="ITEM20"/>
+<TtcnPortTypeElement way="in" typeId="ITEM2"/>
+<TtcnPortTypeElement way="in" typeId="ITEM21"/>
+<TtcnPortTypeElement way="in" typeId="ITEM22"/>
+<TtcnPortTypeElement way="in" typeId="ITEM23"/>
+<TtcnPortTypeElement way="in" typeId="ITEM9"/>
+<TtcnPortTypeElement way="out" typeId="ITEM11"/>
+<TtcnPortTypeElement way="out" typeId="ITEM25"/>
+<TtcnPortTypeElement way="out" typeId="ITEM8"/>
+<TtcnPortTypeElement way="out" typeId="ITEM20"/>
+<TtcnPortTypeElement way="in" typeId="ITEM2"/>
+<TtcnPortTypeElement way="in" typeId="ITEM21"/>
+<TtcnPortTypeElement way="in" typeId="ITEM22"/>
+<TtcnPortTypeElement way="in" typeId="ITEM23"/>
+<TtcnPortTypeElement way="in" typeId="ITEM9"/>
+<TtcnPortTypeElement way="out" typeId="ITEM11"/>
+<TtcnPortTypeElement way="out" typeId="ITEM25"/>
+<TtcnPortTypeElement way="out" typeId="ITEM8"/>
+<TtcnPortTypeElement way="out" typeId="ITEM20"/>
+<TtcnPortTypeElement way="in" typeId="ITEM2"/>
+<TtcnPortTypeElement way="in" typeId="ITEM21"/>
+<TtcnPortTypeElement way="in" typeId="ITEM22"/>
+<TtcnPortTypeElement way="in" typeId="ITEM23"/>
+<TtcnPortTypeElement way="in" typeId="ITEM9"/>
+<TtcnPortTypeElement way="out" typeId="ITEM11"/>
+<TtcnPortTypeElement way="out" typeId="ITEM25"/>
+<TtcnPortTypeElement way="out" typeId="ITEM8"/>
+<TtcnPortTypeElement way="out" typeId="ITEM20"/>
+<TtcnPortTypeElement way="in" typeId="ITEM2"/>
+<TtcnPortTypeElement way="in" typeId="ITEM21"/>
+<TtcnPortTypeElement way="in" typeId="ITEM22"/>
+<TtcnPortTypeElement way="in" typeId="ITEM23"/>
+<TtcnPortTypeElement way="in" typeId="ITEM9"/>
+<TtcnPortTypeElement way="in" typeId="ITEM24"/>
+<TtcnPortTypeElement way="out" typeId="ITEM11"/>
+<TtcnPortTypeElement way="out" typeId="ITEM25"/>
+<TtcnPortTypeElement way="out" typeId="ITEM8"/>
+<TtcnPortTypeElement way="out" typeId="ITEM20"/>
+<TtcnPortTypeElement way="in" typeId="ITEM2"/>
+<TtcnPortTypeElement way="in" typeId="ITEM21"/>
+<TtcnPortTypeElement way="in" typeId="ITEM22"/>
+<TtcnPortTypeElement way="in" typeId="ITEM23"/>
+<TtcnPortTypeElement way="in" typeId="ITEM9"/>
+<TtcnPortTypeElement way="in" typeId="ITEM24"/>
+<TtcnPortTypeElement way="out" typeId="ITEM11"/>
+<TtcnPortTypeElement way="out" typeId="ITEM25"/>
+<TtcnPortTypeElement way="out" typeId="ITEM8"/>
+<TtcnPortTypeElement way="out" typeId="ITEM20"/>
+<TtcnPortTypeElement way="in" typeId="ITEM2"/>
+<TtcnPortTypeElement way="in" typeId="ITEM21"/>
+<TtcnPortTypeElement way="in" typeId="ITEM22"/>
+<TtcnPortTypeElement way="in" typeId="ITEM23"/>
+<TtcnPortTypeElement way="in" typeId="ITEM9"/>
+<TtcnPortTypeElement way="in" typeId="ITEM24"/>
+<TtcnPortTypeElement way="out" typeId="ITEM11"/>
+<TtcnPortTypeElement way="out" typeId="ITEM25"/>
+<TtcnPortTypeElement way="out" typeId="ITEM8"/>
+<TtcnPortTypeElement way="out" typeId="ITEM20"/>
+<TtcnPortTypeElement way="in" typeId="ITEM2"/>
+<TtcnPortTypeElement way="in" typeId="ITEM21"/>
+<TtcnPortTypeElement way="in" typeId="ITEM22"/>
+<TtcnPortTypeElement way="in" typeId="ITEM23"/>
+<TtcnPortTypeElement way="in" typeId="ITEM9"/>
+<TtcnPortTypeElement way="in" typeId="ITEM24"/>
+<TtcnPortTypeElement way="out" typeId="ITEM11"/>
+<TtcnPortTypeElement way="out" typeId="ITEM25"/>
+<TtcnPortTypeElement way="out" typeId="ITEM8"/>
+<TtcnPortTypeElement way="out" typeId="ITEM20"/>
+<TtcnPortTypeElement way="in" typeId="ITEM2"/>
+<TtcnPortTypeElement way="in" typeId="ITEM21"/>
+<TtcnPortTypeElement way="in" typeId="ITEM22"/>
+<TtcnPortTypeElement way="in" typeId="ITEM23"/>
+<TtcnPortTypeElement way="in" typeId="ITEM9"/>
+<TtcnPortTypeElement way="in" typeId="ITEM24"/>
+<TtcnPortTypeElement way="out" typeId="ITEM11"/>
+<TtcnPortTypeElement way="out" typeId="ITEM25"/>
+<TtcnPortTypeElement way="out" typeId="ITEM8"/>
+<TtcnPortTypeElement way="out" typeId="ITEM20"/>
+<TtcnPortTypeElement way="in" typeId="ITEM2"/>
+<TtcnPortTypeElement way="in" typeId="ITEM21"/>
+<TtcnPortTypeElement way="in" typeId="ITEM22"/>
+<TtcnPortTypeElement way="in" typeId="ITEM23"/>
+<TtcnPortTypeElement way="in" typeId="ITEM9"/>
+<TtcnPortTypeElement way="in" typeId="ITEM24"/>
+<TtcnPortTypeElement way="out" typeId="ITEM11"/>
+<TtcnPortTypeElement way="out" typeId="ITEM25"/>
+<TtcnPortTypeElement way="out" typeId="ITEM8"/>
+<TtcnPortTypeElement way="out" typeId="ITEM20"/>
+<TtcnPortTypeElement way="in" typeId="ITEM2"/>
+<TtcnPortTypeElement way="in" typeId="ITEM21"/>
+<TtcnPortTypeElement way="in" typeId="ITEM22"/>
+<TtcnPortTypeElement way="in" typeId="ITEM23"/>
+<TtcnPortTypeElement way="in" typeId="ITEM9"/>
+<TtcnPortTypeElement way="in" typeId="ITEM24"/>
+<TtcnPortTypeElement way="out" typeId="ITEM11"/>
+<TtcnPortTypeElement way="out" typeId="ITEM25"/>
+<TtcnPortTypeElement way="out" typeId="ITEM8"/>
+<TtcnPortTypeElement way="out" typeId="ITEM20"/>
+<TtcnPortTypeElement way="in" typeId="ITEM2"/>
+<TtcnPortTypeElement way="in" typeId="ITEM21"/>
+<TtcnPortTypeElement way="in" typeId="ITEM22"/>
+<TtcnPortTypeElement way="in" typeId="ITEM23"/>
+<TtcnPortTypeElement way="in" typeId="ITEM9"/>
+<TtcnPortTypeElement way="in" typeId="ITEM24"/>
+<TtcnPortTypeElement way="out" typeId="ITEM11"/>
+<TtcnPortTypeElement way="out" typeId="ITEM25"/>
+<TtcnPortTypeElement way="out" typeId="ITEM8"/>
+<TtcnPortTypeElement way="out" typeId="ITEM20"/>
+<TtcnPortTypeElement way="in" typeId="ITEM2"/>
+<TtcnPortTypeElement way="in" typeId="ITEM21"/>
+<TtcnPortTypeElement way="in" typeId="ITEM22"/>
+<TtcnPortTypeElement way="in" typeId="ITEM23"/>
+<TtcnPortTypeElement way="in" typeId="ITEM9"/>
+<TtcnPortTypeElement way="in" typeId="ITEM24"/>
+<TtcnPortTypeElement way="out" typeId="ITEM11"/>
+<TtcnPortTypeElement way="out" typeId="ITEM25"/>
+<TtcnPortTypeElement way="out" typeId="ITEM8"/>
+<TtcnPortTypeElement way="out" typeId="ITEM20"/>
+<TtcnPortTypeElement way="in" typeId="ITEM2"/>
+<TtcnPortTypeElement way="in" typeId="ITEM21"/>
+<TtcnPortTypeElement way="in" typeId="ITEM22"/>
+<TtcnPortTypeElement way="in" typeId="ITEM23"/>
+<TtcnPortTypeElement way="in" typeId="ITEM9"/>
+<TtcnPortTypeElement way="in" typeId="ITEM24"/>
+<TtcnPortTypeElement way="out" typeId="ITEM11"/>
+<TtcnPortTypeElement way="out" typeId="ITEM25"/>
+<TtcnPortTypeElement way="out" typeId="ITEM8"/>
+<TtcnPortTypeElement way="out" typeId="ITEM20"/>
+<TtcnPortTypeElement way="in" typeId="ITEM2"/>
+<TtcnPortTypeElement way="in" typeId="ITEM21"/>
+<TtcnPortTypeElement way="in" typeId="ITEM22"/>
+<TtcnPortTypeElement way="in" typeId="ITEM23"/>
+<TtcnPortTypeElement way="in" typeId="ITEM9"/>
+<TtcnPortTypeElement way="in" typeId="ITEM24"/>
+<TtcnPortTypeElement way="out" typeId="ITEM11"/>
+<TtcnPortTypeElement way="out" typeId="ITEM25"/>
+<TtcnPortTypeElement way="out" typeId="ITEM8"/>
+<TtcnPortTypeElement way="out" typeId="ITEM20"/>
+<TtcnPortTypeElement way="in" typeId="ITEM2"/>
+<TtcnPortTypeElement way="in" typeId="ITEM21"/>
+<TtcnPortTypeElement way="in" typeId="ITEM22"/>
+<TtcnPortTypeElement way="in" typeId="ITEM23"/>
+<TtcnPortTypeElement way="in" typeId="ITEM9"/>
+<TtcnPortTypeElement way="in" typeId="ITEM24"/>
+<TtcnPortTypeElement way="out" typeId="ITEM11"/>
+<TtcnPortTypeElement way="out" typeId="ITEM25"/>
+<TtcnPortTypeElement way="out" typeId="ITEM8"/>
+<TtcnPortTypeElement way="out" typeId="ITEM20"/>
+<TtcnPortTypeElement way="in" typeId="ITEM2"/>
+<TtcnPortTypeElement way="in" typeId="ITEM21"/>
+<TtcnPortTypeElement way="in" typeId="ITEM22"/>
+<TtcnPortTypeElement way="in" typeId="ITEM23"/>
+<TtcnPortTypeElement way="in" typeId="ITEM9"/>
+<TtcnPortTypeElement way="in" typeId="ITEM24"/>
+<TtcnPortTypeElement way="out" typeId="ITEM11"/>
+<TtcnPortTypeElement way="out" typeId="ITEM25"/>
+<TtcnPortTypeElement way="out" typeId="ITEM8"/>
+<TtcnPortTypeElement way="out" typeId="ITEM20"/>
+<TtcnPortTypeElement way="in" typeId="ITEM2"/>
+<TtcnPortTypeElement way="in" typeId="ITEM21"/>
+<TtcnPortTypeElement way="in" typeId="ITEM22"/>
+<TtcnPortTypeElement way="in" typeId="ITEM23"/>
+<TtcnPortTypeElement way="in" typeId="ITEM9"/>
+<TtcnPortTypeElement way="in" typeId="ITEM24"/>
+<TtcnPortTypeElement way="out" typeId="ITEM11"/>
+<TtcnPortTypeElement way="out" typeId="ITEM25"/>
+<TtcnPortTypeElement way="out" typeId="ITEM8"/>
+<TtcnPortTypeElement way="out" typeId="ITEM20"/>
+<TtcnPortTypeElement way="in" typeId="ITEM2"/>
+<TtcnPortTypeElement way="in" typeId="ITEM21"/>
+<TtcnPortTypeElement way="in" typeId="ITEM22"/>
+<TtcnPortTypeElement way="in" typeId="ITEM23"/>
+<TtcnPortTypeElement way="in" typeId="ITEM9"/>
+<TtcnPortTypeElement way="in" typeId="ITEM24"/>
+<TtcnPortTypeElement way="out" typeId="ITEM11"/>
+<TtcnPortTypeElement way="out" typeId="ITEM25"/>
+<TtcnPortTypeElement way="out" typeId="ITEM8"/>
+<TtcnPortTypeElement way="out" typeId="ITEM20"/>
+<TtcnPortTypeElement way="in" typeId="ITEM2"/>
+<TtcnPortTypeElement way="in" typeId="ITEM21"/>
+<TtcnPortTypeElement way="in" typeId="ITEM22"/>
+<TtcnPortTypeElement way="in" typeId="ITEM23"/>
+<TtcnPortTypeElement way="in" typeId="ITEM9"/>
+<TtcnPortTypeElement way="in" typeId="ITEM24"/>
+</Item>
+<Item id="ITEM2" type="type" name="sOkFreeSpot" parentId="ITEM1" scope="none">
+</Item>
+<Item id="ITEM20" type="type" name="sAddZone" parentId="ITEM1" scope="none">
+</Item>
+<Item id="ITEM21" type="type" name="sOkTotalPlaces" parentId="ITEM1" scope="none">
+</Item>
+<Item id="ITEM22" type="type" name="sErrorFindingZone" parentId="ITEM1" scope="none">
+</Item>
+<Item id="ITEM23" type="type" name="sNoPossibleCreateZone" parentId="ITEM1" scope="none">
+</Item>
+<Item id="ITEM24" type="type" name="tInfoZone" parentId="ITEM1" scope="none">
+</Item>
+<Item id="ITEM25" type="type" name="sTotalPlaceZone" parentId="ITEM1" scope="none">
+</Item>
+<Item id="ITEM26" type="type" name="sOkCreateZone" parentId="ITEM1" scope="none">
+</Item>
+<Item id="ITEM27" type="ttcn_test_case" name="tc_RequestInformationZone" parentId="ITEM1" scope="none" runsOn="ITEM5" systemInterface="ITEM5">
+</Item>
+<Item id="ITEM28" type="variable" name="RTDS_param1" parentId="ITEM27" scope="none" variableTypeName="Quant" isFormalParam="TRUE">
+</Item>
+<Item id="ITEM29" type="ttcn_test_case" name="tc_EntryCarZone" parentId="ITEM1" scope="none" runsOn="ITEM5" systemInterface="ITEM5">
+</Item>
+<Item id="ITEM3" type="ttcn_function" name="&amp;receive" parentId="ITEM1" scope="none">
+</Item>
+<Item id="ITEM30" type="type" name="sIR3_Zone" parentId="ITEM1" scope="none">
+</Item>
+<Item id="ITEM31" type="type" name="sIR4_Zone" parentId="ITEM1" scope="none">
+</Item>
+<Item id="ITEM32" type="type" name="sIR2_Zone" parentId="ITEM1" scope="none">
+</Item>
+<Item id="ITEM4" type="ttcn_test_case" name="tc_SetFreeSpot" parentId="ITEM1" scope="none" runsOn="ITEM5" systemInterface="ITEM5">
+</Item>
+<Item id="ITEM5" type="ttcn_component" name="SystemParking" parentId="ITEM1" scope="none">
+</Item>
+<Item id="ITEM6" type="variable" name="RTDS_param2" parentId="ITEM4" scope="none" variableTypeName="zone" isFormalParam="TRUE">
+</Item>
+<Item id="ITEM7" type="variable" name="RTDS_param1" parentId="ITEM4" scope="none" variableTypeName="Quant" isFormalParam="TRUE">
+</Item>
+<Item id="ITEM8" type="type" name="sReqInfoZones" parentId="ITEM1" scope="none">
+</Item>
+<Item id="ITEM9" type="type" name="sZoneCreated" parentId="ITEM1" scope="none">
+</Item>
+</DictionaryObjects>
